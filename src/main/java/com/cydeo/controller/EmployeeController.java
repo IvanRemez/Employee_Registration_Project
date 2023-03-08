@@ -11,6 +11,6 @@ public class EmployeeController {
     @GetMapping("/register")
     public String createEmployee() {
 
-        return "employee/employee-create"
+        return "employee/employee-create";
     }
 }
