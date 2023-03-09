@@ -44,7 +44,7 @@ public class EmployeeController {
         }
 
         employeeService.saveEmployee(employee);
-        return "redirect:/employee-register";   // w/ REDIRECT -> ENDPOINTS
+        return "redirect:/employee/list";   // w/ REDIRECT -> ENDPOINTS
     }
 
     @GetMapping("/list")
