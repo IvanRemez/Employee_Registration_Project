@@ -5,10 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 import java.time.LocalDate;
 
 @Data
@@ -33,9 +30,15 @@ public class Employee {
 
     // Thymeleaf accepts yyyy-MM-dd, but LocalDate accepts mm-dd-yyyy or yyyy-dd-mm
     @DateTimeFormat(pattern = "yyyy-MM-dd")
+//    @NotNull
     private LocalDate birthday;
+//    @NotBlank
+//    @Email
     private String email;
+//    @NotBlank
+//    @Pattern(regexp = "(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{4,}")
     private String password;
+
     private String address;
     private String address2;
     private String city;
